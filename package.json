@@ -1,0 +1,73 @@
+{
+  "name": "vscode-codeowners",
+  "displayName": "Codeowners",
+  "description": "Brings the power of the codeowners file to your fingertips",
+  "version": "1.1.0",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Noah Manneschmidt",
+    "email": "noah@manneschmidt.net"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/noahm/vscode-codeowners.git"
+  },
+  "icon": "images/icon.png",
+  "publisher": "nmannesc",
+  "engines": {
+    "vscode": "^1.27.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "workspaceContains:./CODEOWNERS",
+    "workspaceContains:./.github/CODEOWNERS",
+    "workspaceContains:./.gitlab/CODEOWNERS",
+    "workspaceContains:./docs/CODEOWNERS"
+  ],
+  "main": "./out/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "codeowners.contactInfo",
+        "title": "Team List",
+        "category": "Codeowners"
+      },
+      {
+        "command": "codeowners.contactInfo.currentFile",
+        "title": "Current File Owners Info",
+        "category": "Codeowners"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run esbuild --minify",
+    "package": "vsce package",
+    "esbuild": "esbuild ./src/extension.ts --bundle --outfile=out/extension.js --external:vscode --format=cjs --platform=node",
+    "compile": "yarn run esbuild --sourcemap",
+    "watch": "yarn run esbuild --sourcemap --watch",
+    "pretest": "yarn run compile && yarn run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.27.0",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "@vscode/test-electron": "^2.1.5",
+    "esbuild": "^0.15.8",
+    "eslint": "^8.20.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.0.0",
+    "typescript": "^4.7.4",
+    "vsce": "^2.11.0"
+  },
+  "dependencies": {
+    "clipboardy": "^2.0.0",
+    "@nmann/codeowners": "^1.0.0"
+  }
+}
