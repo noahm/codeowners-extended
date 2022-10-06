@@ -2,6 +2,10 @@
 
 All notable changes to the "codeowners-extended" extension will be documented in this file according to recommendations of [Keep a Changelog](http://keepachangelog.com/).
 
+## [v1.0.1] - 2022-10-06
+
+- Fix a bug handling paths on windows. The extension is now fully cross-platform!
+
 ## [v1.0.0] - 2022-10-06
 
 - Initial public release
