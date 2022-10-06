@@ -3,4 +3,5 @@ export function getNthProperty(obj: Record<string, string>, n: number) {
   if (keys.length > n) {
     return obj[keys[n]];
   }
+  return undefined;
 }

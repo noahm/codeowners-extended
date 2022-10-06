@@ -1,5 +1,5 @@
 import * as vscode from "vscode";
-import Codeowners from "twitch-codeowners";
+import Codeowners from "@nmann/codeowners";
 import { getNthProperty } from "./utils";
 
 export class OwnerDisplay {
