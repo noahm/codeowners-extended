@@ -35,7 +35,7 @@ export class OwnerDisplay {
   public refreshOwnersFile() {
     try {
       this.codeowners = new Codeowners(
-        vscode.workspace.workspaceFolders![0].uri.path
+        vscode.workspace.workspaceFolders![0].uri.fsPath
       );
       this.teamInfo = new Map(
         this.codeowners.contactInfo
