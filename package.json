@@ -1,6 +1,6 @@
 {
-  "name": "vscode-codeowners",
-  "displayName": "Codeowners",
+  "name": "codeowners-extended",
+  "displayName": "Codeowners Extended",
   "description": "Brings the power of the codeowners file to your fingertips",
   "version": "1.0.0",
   "license": "Apache-2.0",
@@ -10,10 +10,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/noahm/vscode-codeowners.git"
+    "url": "https://github.com/noahm/codeowners-extended.git"
   },
   "icon": "images/icon.png",
-  "publisher": "nmannesc",
+  "publisher": "noahm",
   "engines": {
     "vscode": "^1.27.0"
   },

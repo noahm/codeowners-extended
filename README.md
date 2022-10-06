@@ -1,4 +1,4 @@
-# vscode-codeowners
+# codeowners-extended
 
 ## Features
 
@@ -12,16 +12,16 @@ Also allows you to look up info for any team via a quick-search command.
 
 ## Installation
 
-For now this has not been published to the public extenstion registry.
-Download the latest release from the releases section to the right. Run `code --install-extension vscode-codeowners-X.X.X.vsix`
-Or, from the "..." menu at the top of the extensions sidebar inside VS Code, pick "Install from VISX..."
+The simplest way to install is from the official extension marketplace: https://marketplace.visualstudio.com/items?itemName=noahm.codeowners-extended
+
+Alternatively, download the latest release from the releases section here. Run `code --install-extension codeowners-extended-X.X.X.vsix` or, from the "..." menu at the top of the extensions sidebar inside VS Code, pick "Install from VISX..."
 
 ## Requirements
 
 Add a CODEOWNERS file to your project according to [Github documentation](https://help.github.com/articles/about-codeowners/)
 
 Team contact info will only be available for projects that include a structured contact info section
-within its CODEOWNERS file according to the specs described [here](https://git-aws.internal.justin.tv/noahm/codeowners#library-usage).
+within its CODEOWNERS file according to the specs described [here](https://github.com/noahm/codeowners#library-usage).
 
 ## Extension Settings
 

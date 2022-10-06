@@ -1,8 +1,8 @@
 # Change Log
 
-All notable changes to the "vscode-codeowners" extension will be documented in this file according to recommendations of [Keep a Changelog](http://keepachangelog.com/).
+All notable changes to the "codeowners-extended" extension will be documented in this file according to recommendations of [Keep a Changelog](http://keepachangelog.com/).
 
-## [Unreleased]
+## [v1.0.0] - 2022-10-06
 
 - Initial public release
   - Parses codeowners files with additional team info comment block
