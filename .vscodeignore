@@ -2,7 +2,9 @@
 .vscode-test/**
 src/**
 .gitignore
-.yarnrc
+.yarnrc.yml
+.yarn/**
+.github/**
 **/tsconfig.json
 **/.eslintrc.json
 **/*.map

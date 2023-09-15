@@ -1,0 +1,32 @@
+name: Status Checks
+on:
+  push:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Status Checks
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          always-auth: true
+          node-version: 20
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@noahm"
+          cache: "yarn"
+
+      - name: Init project
+        run: yarn --frozen-lockfile
+
+      - name: Typecheck
+        run: yarn typecheck
+
+      - name: Lint
+        run: yarn lint
+
+      - name: Webpack Build
+        run: yarn compile
+
+      # - name: Unit Tests
+      #   run: yarn test

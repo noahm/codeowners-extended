@@ -5,10 +5,11 @@ import { getNthProperty } from "./utils";
 export class OwnerDisplay {
   private statusBarItem = vscode.window.createStatusBarItem(
     vscode.StatusBarAlignment.Right,
-    1000
+    1000,
   );
   private codeowners: Codeowners | null = null;
-  public teamInfo: Map<string, Record<string, string>> | null = null;
+  public teamInfo: Map<string, Record<string, string | undefined>> | null =
+    null;
   private pathPrefixLength = 0;
 
   constructor() {
@@ -27,20 +28,20 @@ export class OwnerDisplay {
     }
     return this.codeowners.getOwner(
       vscode.window.activeTextEditor.document.fileName.slice(
-        this.pathPrefixLength
-      )
+        this.pathPrefixLength,
+      ),
     );
   }
 
   public refreshOwnersFile() {
     try {
       this.codeowners = new Codeowners(
-        vscode.workspace.workspaceFolders![0].uri.fsPath
+        vscode.workspace.workspaceFolders![0].uri.fsPath,
       );
       this.teamInfo = new Map(
         this.codeowners.contactInfo
           .map((teamInfo) => [getNthProperty(teamInfo, 0)!, teamInfo] as const)
-          .filter((item) => !!item[0])
+          .filter((item) => !!item[0]),
       );
       this.pathPrefixLength = this.codeowners.codeownersDirectory.length + 1;
     } catch (e) {
@@ -81,7 +82,10 @@ export class OwnerDisplayController {
     // create a combined disposable from both event subscriptions
     this.disposable = vscode.Disposable.from(
       vscode.window.onDidChangeActiveTextEditor(this.onEditorChange, this),
-      vscode.workspace.onDidChangeWorkspaceFolders(this.onWorkspaceChange, this)
+      vscode.workspace.onDidChangeWorkspaceFolders(
+        this.onWorkspaceChange,
+        this,
+      ),
     );
 
     // update the counter for the current file
