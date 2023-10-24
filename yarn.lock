@@ -353,10 +353,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/mocha@npm:^10.0.0":
-  version: 10.0.1
-  resolution: "@types/mocha@npm:10.0.1"
-  checksum: 224ea9fce7b1734ccdb9aa99a622d902a538ce1847bca7fd22c5fb38adcf3ed536f50f48f587085db988a4bb3c2eb68f4b98e1cd6a38bc5547bd3bbbedc54495
+"@types/mocha@npm:^10.0.3":
+  version: 10.0.3
+  resolution: "@types/mocha@npm:10.0.3"
+  checksum: 52481d72c0f2eb6afcf9a43f851f81d78211880f765b5922a1aa322ed6d557bddc60786a3ae7b6c5e388e2f0cddc09d9ead3c9b80e66102eb41b58acae1e4894
   languageName: node
   linkType: hard
 
@@ -970,7 +970,7 @@ __metadata:
   resolution: "codeowners-extended@workspace:."
   dependencies:
     "@nmann/codeowners": ^2.0.1
-    "@types/mocha": ^10.0.0
+    "@types/mocha": ^10.0.3
     "@types/node": ^20.6.2
     "@types/vscode": ^1.27.0
     "@typescript-eslint/eslint-plugin": ^6.9.0
