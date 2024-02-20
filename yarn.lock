@@ -568,14 +568,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vscode/vsce@npm:^2.21.1":
-  version: 2.21.1
-  resolution: "@vscode/vsce@npm:2.21.1"
+"@vscode/vsce@npm:^2.23.0":
+  version: 2.23.0
+  resolution: "@vscode/vsce@npm:2.23.0"
   dependencies:
     azure-devops-node-api: ^11.0.1
     chalk: ^2.4.2
     cheerio: ^1.0.0-rc.9
     commander: ^6.2.1
+    find-yarn-workspace-root: ^2.0.0
     glob: ^7.0.6
     hosted-git-info: ^4.0.2
     jsonc-parser: ^3.2.0
@@ -598,7 +599,7 @@ __metadata:
       optional: true
   bin:
     vsce: vsce
-  checksum: d597d97683ef9e592383a33906313534fc40ca2a030fc63c226451e3754baa013845f93b93e7648396a8d79106626ad65b60733fa03c47e4964ee98c6b7b6734
+  checksum: e266096760cb6b58547b4a9b35e3de19c5d99ac353dc1e922a8d935032f29c411127c183015cd295bc3fa7a3f2cf5acb118015ab99714f57852353d7885e386e
   languageName: node
   linkType: hard
 
@@ -1029,7 +1030,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^6.19.1
     "@typescript-eslint/parser": ^6.9.0
     "@vscode/test-electron": ^2.3.8
-    "@vscode/vsce": ^2.21.1
+    "@vscode/vsce": ^2.23.0
     clipboardy: ^3.0.0
     esbuild: ^0.20.1
     eslint: ^8.50.0
@@ -1674,6 +1675,15 @@ __metadata:
     locate-path: ^7.1.0
     path-exists: ^5.0.0
   checksum: 9a21b7f9244a420e54c6df95b4f6fc3941efd3c3e5476f8274eb452f6a85706e7a6a90de71353ee4f091fcb4593271a6f92810a324ec542650398f928783c280
+  languageName: node
+  linkType: hard
+
+"find-yarn-workspace-root@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "find-yarn-workspace-root@npm:2.0.0"
+  dependencies:
+    micromatch: ^4.0.2
+  checksum: fa5ca8f9d08fe7a54ce7c0a5931ff9b7e36f9ee7b9475fb13752bcea80ec6b5f180fa5102d60b376d5526ce924ea3fc6b19301262efa0a5d248dd710f3644242
   languageName: node
   linkType: hard
 
@@ -2485,7 +2495,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"micromatch@npm:^4.0.4":
+"micromatch@npm:^4.0.2, micromatch@npm:^4.0.4":
   version: 4.0.5
   resolution: "micromatch@npm:4.0.5"
   dependencies:
