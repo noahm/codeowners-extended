@@ -569,9 +569,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vscode/vsce@npm:^2.21.1":
-  version: 2.21.1
-  resolution: "@vscode/vsce@npm:2.21.1"
+"@vscode/vsce@npm:^2.24.0":
+  version: 2.24.0
+  resolution: "@vscode/vsce@npm:2.24.0"
   dependencies:
     azure-devops-node-api: ^11.0.1
     chalk: ^2.4.2
@@ -599,7 +599,7 @@ __metadata:
       optional: true
   bin:
     vsce: vsce
-  checksum: d597d97683ef9e592383a33906313534fc40ca2a030fc63c226451e3754baa013845f93b93e7648396a8d79106626ad65b60733fa03c47e4964ee98c6b7b6734
+  checksum: 3b603681ea9bdb630be5f31a0d7cc1e5444d84c58418001ad0d89acc1d333a00d77535fa00924e21cf67686a0d960a16ee3851066a7c14cb6a66cffac31f40d5
   languageName: node
   linkType: hard
 
@@ -1030,7 +1030,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^6.19.1
     "@typescript-eslint/parser": ^7.0.2
     "@vscode/test-electron": ^2.3.8
-    "@vscode/vsce": ^2.21.1
+    "@vscode/vsce": ^2.24.0
     clipboardy: ^3.0.0
     esbuild: ^0.20.1
     eslint: ^8.50.0
