@@ -67,7 +67,7 @@
     "esbuild": "^0.20.1",
     "eslint": "^8.50.0",
     "glob": "^10.3.10",
-    "mocha": "^10.2.0",
+    "mocha": "^10.4.0",
     "typescript": "^5.0.0"
   },
   "packageManager": "yarn@3.6.3"
