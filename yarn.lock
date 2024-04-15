@@ -569,14 +569,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vscode/vsce@npm:^2.21.1":
-  version: 2.21.1
-  resolution: "@vscode/vsce@npm:2.21.1"
+"@vscode/vsce@npm:^2.25.0":
+  version: 2.25.0
+  resolution: "@vscode/vsce@npm:2.25.0"
   dependencies:
-    azure-devops-node-api: ^11.0.1
+    azure-devops-node-api: ^12.5.0
     chalk: ^2.4.2
     cheerio: ^1.0.0-rc.9
+    cockatiel: ^3.1.2
     commander: ^6.2.1
+    form-data: ^4.0.0
     glob: ^7.0.6
     hosted-git-info: ^4.0.2
     jsonc-parser: ^3.2.0
@@ -599,7 +601,7 @@ __metadata:
       optional: true
   bin:
     vsce: vsce
-  checksum: d597d97683ef9e592383a33906313534fc40ca2a030fc63c226451e3754baa013845f93b93e7648396a8d79106626ad65b60733fa03c47e4964ee98c6b7b6734
+  checksum: 5d12f1af880e1320c295f2ad9d048f6fd2887167c8da7d29ce0c772cff1a5605a415f4ff3ea57040f66a39879aa00c95876f4986453ca728c8233e8dcf7ffcba
   languageName: node
   linkType: hard
 
@@ -762,13 +764,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"azure-devops-node-api@npm:^11.0.1":
-  version: 11.2.0
-  resolution: "azure-devops-node-api@npm:11.2.0"
+"asynckit@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "asynckit@npm:0.4.0"
+  checksum: 7b78c451df768adba04e2d02e63e2d0bf3b07adcd6e42b4cf665cb7ce899bedd344c69a1dcbce355b5f972d597b25aaa1c1742b52cffd9caccb22f348114f6be
+  languageName: node
+  linkType: hard
+
+"azure-devops-node-api@npm:^12.5.0":
+  version: 12.5.0
+  resolution: "azure-devops-node-api@npm:12.5.0"
   dependencies:
     tunnel: 0.0.6
     typed-rest-client: ^1.8.4
-  checksum: 52e84379b4ce71ad8a79470ba89e1d1217b28ee3670c7e484e1b1d9c210acf406ab09132c241cb481f78354df701dae7752ba3c4e3d28b2b6c0b0ff2d9eb7199
+  checksum: 7c2c3ae21eaf1bc3627ba4ea87bdac1085a3594eacf40eb6d7b11292f057988db38f718f4597733c6861d854c28bfe146bcf3964a13adddebe1085270bb63097
   languageName: node
   linkType: hard
 
@@ -1019,6 +1028,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cockatiel@npm:^3.1.2":
+  version: 3.1.2
+  resolution: "cockatiel@npm:3.1.2"
+  checksum: 5ba2d9ffd738d38c5f1af66f4c36f302485f4ebf25b96e47aa9c9ea3fecd47ed770bfc9da52ac58bef3dfb330efd7e9be557691b4e620a1479d79009bff2b74e
+  languageName: node
+  linkType: hard
+
 "codeowners-extended@workspace:.":
   version: 0.0.0-use.local
   resolution: "codeowners-extended@workspace:."
@@ -1030,7 +1046,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^6.19.1
     "@typescript-eslint/parser": ^7.0.2
     "@vscode/test-electron": ^2.3.8
-    "@vscode/vsce": ^2.21.1
+    "@vscode/vsce": ^2.25.0
     clipboardy: ^3.0.0
     esbuild: ^0.20.1
     eslint: ^8.50.0
@@ -1078,6 +1094,15 @@ __metadata:
   bin:
     color-support: bin.js
   checksum: 9b7356817670b9a13a26ca5af1c21615463b500783b739b7634a0c2047c16cef4b2865d7576875c31c3cddf9dd621fa19285e628f20198b233a5cfdda6d0793b
+  languageName: node
+  linkType: hard
+
+"combined-stream@npm:^1.0.8":
+  version: 1.0.8
+  resolution: "combined-stream@npm:1.0.8"
+  dependencies:
+    delayed-stream: ~1.0.0
+  checksum: 49fa4aeb4916567e33ea81d088f6584749fc90c7abec76fd516bf1c5aa5c79f3584b5ba3de6b86d26ddd64bae5329c4c7479343250cfe71c75bb366eae53bb7c
   languageName: node
   linkType: hard
 
@@ -1186,6 +1211,13 @@ __metadata:
   version: 0.1.4
   resolution: "deep-is@npm:0.1.4"
   checksum: edb65dd0d7d1b9c40b2f50219aef30e116cedd6fc79290e740972c132c09106d2e80aa0bc8826673dd5a00222d4179c84b36a790eef63a4c4bca75a37ef90804
+  languageName: node
+  linkType: hard
+
+"delayed-stream@npm:~1.0.0":
+  version: 1.0.0
+  resolution: "delayed-stream@npm:1.0.0"
+  checksum: 46fe6e83e2cb1d85ba50bd52803c68be9bd953282fa7096f51fc29edd5d67ff84ff753c51966061e5ba7cb5e47ef6d36a91924eddb7f3f3483b1c560f77a0020
   languageName: node
   linkType: hard
 
@@ -1711,6 +1743,17 @@ __metadata:
     cross-spawn: ^7.0.0
     signal-exit: ^4.0.1
   checksum: 139d270bc82dc9e6f8bc045fe2aae4001dc2472157044fdfad376d0a3457f77857fa883c1c8b21b491c6caade9a926a4bed3d3d2e8d3c9202b151a4cbbd0bcd5
+  languageName: node
+  linkType: hard
+
+"form-data@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "form-data@npm:4.0.0"
+  dependencies:
+    asynckit: ^0.4.0
+    combined-stream: ^1.0.8
+    mime-types: ^2.1.12
+  checksum: 01135bf8675f9d5c61ff18e2e2932f719ca4de964e3be90ef4c36aacfc7b9cb2fceb5eca0b7e0190e3383fe51c5b37f4cb80b62ca06a99aaabfcfd6ac7c9328c
   languageName: node
   linkType: hard
 
@@ -2492,6 +2535,22 @@ __metadata:
     braces: ^3.0.2
     picomatch: ^2.3.1
   checksum: 02a17b671c06e8fefeeb6ef996119c1e597c942e632a21ef589154f23898c9c6a9858526246abb14f8bca6e77734aa9dcf65476fca47cedfb80d9577d52843fc
+  languageName: node
+  linkType: hard
+
+"mime-db@npm:1.52.0":
+  version: 1.52.0
+  resolution: "mime-db@npm:1.52.0"
+  checksum: 0d99a03585f8b39d68182803b12ac601d9c01abfa28ec56204fa330bc9f3d1c5e14beb049bafadb3dbdf646dfb94b87e24d4ec7b31b7279ef906a8ea9b6a513f
+  languageName: node
+  linkType: hard
+
+"mime-types@npm:^2.1.12":
+  version: 2.1.35
+  resolution: "mime-types@npm:2.1.35"
+  dependencies:
+    mime-db: 1.52.0
+  checksum: 89a5b7f1def9f3af5dad6496c5ed50191ae4331cc5389d7c521c8ad28d5fdad2d06fd81baf38fed813dc4e46bb55c8145bb0ff406330818c9cf712fb2e9b3836
   languageName: node
   linkType: hard
 
