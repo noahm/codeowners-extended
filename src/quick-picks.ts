@@ -1,8 +1,11 @@
+import { ReadOnlyDict } from "@nmann/codeowners";
 import * as clipboardy from "clipboardy";
 import * as vscode from "vscode";
 import { getNthProperty } from "./utils";
 
-export async function quickPickTeamList(teams: Record<string, string>[]) {
+export async function quickPickTeamList(
+  teams: ReadonlyArray<ReadOnlyDict<string>>,
+) {
   const items = teams
     .map((info) => ({
       label: getNthProperty(info, 0) || "",
@@ -22,20 +25,21 @@ export async function quickPickTeamList(teams: Record<string, string>[]) {
   }
 }
 
-export async function quickPickTeamFields(teamInfo: Record<string, string>) {
+export async function quickPickTeamFields(teamInfo: ReadOnlyDict<string>) {
+  const keys = Object.keys(teamInfo) as Array<string>;
   const itemField = await vscode.window.showQuickPick(
-    (Object.keys(teamInfo) as Array<keyof typeof teamInfo>).map((key) => ({
+    keys.map((key) => ({
       label: teamInfo[key] || "",
       description: key,
     })),
     {
       placeHolder: "Select a field to copy",
-    }
+    },
   );
   if (itemField && itemField.label) {
     clipboardy.writeSync(itemField.label);
     vscode.window.showInformationMessage(
-      `Copied "${itemField.label}" to clipboard`
+      `Copied "${itemField.label}" to clipboard`,
     );
   }
 }

@@ -1,15 +1,14 @@
 import * as vscode from "vscode";
-import Codeowners from "@nmann/codeowners";
+import Codeowners, { ReadOnlyDict } from "@nmann/codeowners";
 import { getNthProperty } from "./utils";
 
 export class OwnerDisplay {
   private statusBarItem = vscode.window.createStatusBarItem(
     vscode.StatusBarAlignment.Right,
-    1000
+    1000,
   );
   private codeowners: Codeowners | null = null;
-  public teamInfo: Map<string, Record<string, string>> | null = null;
-  private pathPrefixLength = 0;
+  public teamInfo: Map<string, ReadOnlyDict<string>> | null = null;
 
   constructor() {
     this.refreshOwnersFile();
@@ -25,24 +24,25 @@ export class OwnerDisplay {
     if (!this.codeowners || !vscode.window.activeTextEditor) {
       return [];
     }
-    return this.codeowners.getOwner(
-      vscode.window.activeTextEditor.document.fileName.slice(
-        this.pathPrefixLength
-      )
-    );
+    try {
+      return this.codeowners.getOwner(
+        vscode.window.activeTextEditor.document.fileName,
+      );
+    } catch {
+      return [];
+    }
   }
 
   public refreshOwnersFile() {
     try {
       this.codeowners = new Codeowners(
-        vscode.workspace.workspaceFolders![0].uri.fsPath
+        vscode.workspace.workspaceFolders![0].uri.fsPath,
       );
       this.teamInfo = new Map(
         this.codeowners.contactInfo
           .map((teamInfo) => [getNthProperty(teamInfo, 0)!, teamInfo] as const)
-          .filter((item) => !!item[0])
+          .filter((item) => !!item[0]),
       );
-      this.pathPrefixLength = this.codeowners.codeownersDirectory.length + 1;
     } catch (e) {
       this.codeowners = null;
       this.teamInfo = null;
@@ -81,7 +81,10 @@ export class OwnerDisplayController {
     // create a combined disposable from both event subscriptions
     this.disposable = vscode.Disposable.from(
       vscode.window.onDidChangeActiveTextEditor(this.onEditorChange, this),
-      vscode.workspace.onDidChangeWorkspaceFolders(this.onWorkspaceChange, this)
+      vscode.workspace.onDidChangeWorkspaceFolders(
+        this.onWorkspaceChange,
+        this,
+      ),
     );
 
     // update the counter for the current file

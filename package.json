@@ -22,6 +22,7 @@
   ],
   "activationEvents": [
     "workspaceContains:./CODEOWNERS",
+    "workspaceContains:./.bitbucket/CODEOWNERS",
     "workspaceContains:./.github/CODEOWNERS",
     "workspaceContains:./.gitlab/CODEOWNERS",
     "workspaceContains:./docs/CODEOWNERS"
@@ -68,6 +69,6 @@
   },
   "dependencies": {
     "clipboardy": "^2.0.0",
-    "@nmann/codeowners": "^1.0.0"
+    "@nmann/codeowners": "^2.1.0"
   }
 }
