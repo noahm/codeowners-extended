@@ -2,6 +2,11 @@
 
 All notable changes to the "codeowners-extended" extension will be documented in this file according to recommendations of [Keep a Changelog](http://keepachangelog.com/).
 
+## [v2.0.0] - 2025-12-29
+
+- Adds syntax highlighting support for CODEOWNERS files
+- [Breaking] Minimum supported version is VS Code 1.85
+
 ## [v1.1.0] - 2024-09-19
 
 - Add support for `.bitbucket` folder for CODEOWNERS location.
