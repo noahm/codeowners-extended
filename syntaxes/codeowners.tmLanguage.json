@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json.schemastore.org/tmlanguage.json",
+  "name": "codeowners",
+  "patterns": [
+    {
+      "name": "meta.contactline.codeowners",
+      "begin": "^##",
+      "end": "$",
+      "patterns": [
+        {
+          "name": "variable.other.codeowners",
+          "match": "\\S+"
+        }
+      ]
+    },
+    {
+      "name": "comment.line.codeowners",
+      "match": "^\\s*#.+$"
+    },
+    {
+      "name": "storage.modifier.codeowners",
+      "match": "^\\s*(\\S+)"
+    },
+    {
+      "name": "variable.other.codeowners",
+      "match": "\\S*@\\S+"
+    }
+  ],
+  "scopeName": "text.codeowners"
+}
