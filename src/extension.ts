@@ -13,14 +13,14 @@ export function activate(context: vscode.ExtensionContext) {
     const codeowners = ownerDisplay.getCodeowners();
     if (!codeowners) {
       vscode.window.showErrorMessage(
-        "No codeowners info is available at the moment"
+        "No codeowners info is available at the moment",
       );
       return;
     }
 
     if (!codeowners.contactInfo.length) {
       vscode.window.showWarningMessage(
-        "No usable contact info found in your CODEOWNERS file"
+        "No usable contact info found in your CODEOWNERS file",
       );
       return;
     }
@@ -32,7 +32,7 @@ export function activate(context: vscode.ExtensionContext) {
     const codeowners = ownerDisplay.getCodeowners();
     if (!codeowners) {
       vscode.window.showErrorMessage(
-        "No codeowners info is available at the moment"
+        "No codeowners info is available at the moment",
       );
       return;
     }
@@ -41,7 +41,7 @@ export function activate(context: vscode.ExtensionContext) {
     const teamInfoMap = ownerDisplay.teamInfo;
     if (!teamInfoMap) {
       vscode.window.showErrorMessage(
-        "No codeowners contact info is available at the moment"
+        "No codeowners contact info is available at the moment",
       );
       return;
     }
@@ -52,7 +52,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     if (!teamInfo.length) {
       vscode.window.showInformationMessage(
-        "This file has no owner information."
+        "This file has no owner information.",
       );
     } else if (teamInfo.length > 1) {
       quickPickTeamList(teamInfo);
