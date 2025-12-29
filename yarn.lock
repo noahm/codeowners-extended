@@ -254,18 +254,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nmann/codeowners@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "@nmann/codeowners@npm:2.0.1"
+"@nmann/codeowners@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "@nmann/codeowners@npm:2.1.1"
   dependencies:
     "@nodelib/fs.walk": ^2.0.0
-    commander: ^11.0.0
-    find-up: ^6.0.0
+    commander: ^12.0.0
+    find-up: ^7.0.0
     ignore: ^5.0.0
     true-case-path: ^2.0.0
   bin:
     codeowners: dist/cli.js
-  checksum: 3d688a7f8f0fd5d1b2682b0e4fa8d6ec4bba0f8c14c7a87adfe988a9a5e5a4fcfc2bf9d3c7227d1415aabe74ca1cba1a1d1ceb9e7ce6ae6e48fa25702a5290fa
+  checksum: beb9139eb7d434e43a821dc50a1dbcb08c0e31ec2f3c0bd86213fbceb4006b4bbe467ad31e27b367b424857ef8d411f345d5a2618e3d17621c853ad938de26e6
   languageName: node
   linkType: hard
 
@@ -1023,7 +1023,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "codeowners-extended@workspace:."
   dependencies:
-    "@nmann/codeowners": ^2.0.1
+    "@nmann/codeowners": ^2.1.1
     "@types/mocha": ^10.0.6
     "@types/node": ^20.6.2
     "@types/vscode": ^1.85.0
@@ -1081,10 +1081,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^11.0.0":
-  version: 11.0.0
-  resolution: "commander@npm:11.0.0"
-  checksum: 6621954e1e1d078b4991c1f5bbd9439ad37aa7768d6ab4842de1dbd4d222c8a27e1b8e62108b3a92988614af45031d5bb2a2aaa92951f4d0c934d1a1ac564bb4
+"commander@npm:^12.0.0":
+  version: 12.1.0
+  resolution: "commander@npm:12.1.0"
+  checksum: 68e9818b00fc1ed9cdab9eb16905551c2b768a317ae69a5e3c43924c2b20ac9bb65b27e1cab36aeda7b6496376d4da908996ba2c0b5d79463e0fb1e77935d514
   languageName: node
   linkType: hard
 
@@ -1668,13 +1668,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"find-up@npm:^6.0.0":
-  version: 6.3.0
-  resolution: "find-up@npm:6.3.0"
+"find-up@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "find-up@npm:7.0.0"
   dependencies:
-    locate-path: ^7.1.0
+    locate-path: ^7.2.0
     path-exists: ^5.0.0
-  checksum: 9a21b7f9244a420e54c6df95b4f6fc3941efd3c3e5476f8274eb452f6a85706e7a6a90de71353ee4f091fcb4593271a6f92810a324ec542650398f928783c280
+    unicorn-magic: ^0.1.0
+  checksum: e1c63860f9c04355ab2aa19f4be51c1a6e14a7d8cfbd8090e2be6da2a36a76995907cb45337a4b582b19b164388f71d6ab118869dc7bffb2093f2c089ecb95ee
   languageName: node
   linkType: hard
 
@@ -2377,7 +2378,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"locate-path@npm:^7.1.0":
+"locate-path@npm:^7.2.0":
   version: 7.2.0
   resolution: "locate-path@npm:7.2.0"
   dependencies:
@@ -3658,6 +3659,13 @@ __metadata:
   version: 1.13.4
   resolution: "underscore@npm:1.13.4"
   checksum: 6b04f66cd454e8793a552dc49c71e24e5208a29b9d9c0af988a96948af79103399c36fb15db43f3629bfed152f8b1fe94f44e1249e9d196069c0fc7edfadb636
+  languageName: node
+  linkType: hard
+
+"unicorn-magic@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "unicorn-magic@npm:0.1.0"
+  checksum: 48c5882ca3378f380318c0b4eb1d73b7e3c5b728859b060276e0a490051d4180966beeb48962d850fd0c6816543bcdfc28629dcd030bb62a286a2ae2acb5acb6
   languageName: node
   linkType: hard
 

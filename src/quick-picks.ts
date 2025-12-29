@@ -1,9 +1,10 @@
 import clipboard from "clipboardy";
+import { ReadOnlyDict } from "@nmann/codeowners";
 import * as vscode from "vscode";
 import { getNthProperty } from "./utils";
 
 export async function quickPickTeamList(
-  teams: readonly Readonly<Record<string, string | undefined>>[],
+  teams: ReadonlyArray<ReadOnlyDict<string>>,
 ) {
   const items = teams
     .map((info) => ({
@@ -24,11 +25,10 @@ export async function quickPickTeamList(
   }
 }
 
-export async function quickPickTeamFields(
-  teamInfo: Record<string, string | undefined>,
-) {
+export async function quickPickTeamFields(teamInfo: ReadOnlyDict<string>) {
+  const keys = Object.keys(teamInfo) as Array<string>;
   const itemField = await vscode.window.showQuickPick(
-    (Object.keys(teamInfo) as Array<keyof typeof teamInfo>).map((key) => ({
+    keys.map((key) => ({
       label: teamInfo[key] || "",
       description: key,
     })),

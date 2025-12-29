@@ -2,6 +2,10 @@
 
 All notable changes to the "codeowners-extended" extension will be documented in this file according to recommendations of [Keep a Changelog](http://keepachangelog.com/).
 
+## [v1.1.0] - 2024-09-19
+
+- Add support for `.bitbucket` folder for CODEOWNERS location.
+
 ## [v1.0.1] - 2022-10-06
 
 - Fix a bug handling paths on windows. The extension is now fully cross-platform!

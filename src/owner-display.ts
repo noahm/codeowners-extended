@@ -1,5 +1,5 @@
 import * as vscode from "vscode";
-import Codeowners from "@nmann/codeowners";
+import Codeowners, { ReadOnlyDict } from "@nmann/codeowners";
 import { getNthProperty } from "./utils";
 
 export class OwnerDisplay {
@@ -8,9 +8,7 @@ export class OwnerDisplay {
     1000,
   );
   private codeowners: Codeowners | null = null;
-  public teamInfo: Map<string, Record<string, string | undefined>> | null =
-    null;
-  private pathPrefixLength = 0;
+  public teamInfo: Map<string, ReadOnlyDict<string>> | null = null;
 
   constructor() {
     this.refreshOwnersFile();
@@ -26,11 +24,13 @@ export class OwnerDisplay {
     if (!this.codeowners || !vscode.window.activeTextEditor) {
       return [];
     }
-    return this.codeowners.getOwner(
-      vscode.window.activeTextEditor.document.fileName.slice(
-        this.pathPrefixLength,
-      ),
-    );
+    try {
+      return this.codeowners.getOwner(
+        vscode.window.activeTextEditor.document.fileName,
+      );
+    } catch {
+      return [];
+    }
   }
 
   public refreshOwnersFile() {
@@ -43,7 +43,6 @@ export class OwnerDisplay {
           .map((teamInfo) => [getNthProperty(teamInfo, 0)!, teamInfo] as const)
           .filter((item) => !!item[0]),
       );
-      this.pathPrefixLength = this.codeowners.codeownersDirectory.length + 1;
     } catch (e) {
       this.codeowners = null;
       this.teamInfo = null;

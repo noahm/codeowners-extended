@@ -22,6 +22,7 @@
   ],
   "activationEvents": [
     "workspaceContains:./CODEOWNERS",
+    "workspaceContains:./.bitbucket/CODEOWNERS",
     "workspaceContains:./.github/CODEOWNERS",
     "workspaceContains:./.gitlab/CODEOWNERS",
     "workspaceContains:./docs/CODEOWNERS"
@@ -53,7 +54,7 @@
     "test": "node ./out/test/runTest.js"
   },
   "dependencies": {
-    "@nmann/codeowners": "^2.0.1",
+    "@nmann/codeowners": "^2.1.1",
     "clipboardy": "^3.0.0"
   },
   "devDependencies": {
