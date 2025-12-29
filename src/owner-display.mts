@@ -1,6 +1,6 @@
 import * as vscode from "vscode";
 import Codeowners, { ReadOnlyDict } from "@nmann/codeowners";
-import { getNthProperty } from "./utils";
+import { getNthProperty } from "./utils.mjs";
 
 export class OwnerDisplay {
   private statusBarItem = vscode.window.createStatusBarItem(

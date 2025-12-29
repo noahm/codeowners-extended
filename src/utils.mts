@@ -1,4 +1,4 @@
-import { ReadOnlyDict } from "@nmann/codeowners";
+import type { ReadOnlyDict } from "@nmann/codeowners";
 
 export function getNthProperty(obj: ReadOnlyDict<string>, n: number) {
   const keys = Object.keys(obj);

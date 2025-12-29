@@ -1,7 +1,7 @@
 import clipboard from "clipboardy";
 import { ReadOnlyDict } from "@nmann/codeowners";
 import * as vscode from "vscode";
-import { getNthProperty } from "./utils";
+import { getNthProperty } from "./utils.mjs";
 
 export async function quickPickTeamList(
   teams: ReadonlyArray<ReadOnlyDict<string>>,

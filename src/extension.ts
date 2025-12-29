@@ -1,10 +1,15 @@
 import * as vscode from "vscode";
-import { OwnerDisplay, OwnerDisplayController } from "./owner-display";
-import { quickPickTeamList, quickPickTeamFields } from "./quick-picks";
 
-export function activate(context: vscode.ExtensionContext) {
-  const ownerDisplay = new OwnerDisplay();
-  const ownerDisplayControler = new OwnerDisplayController(ownerDisplay);
+export async function activate(context: vscode.ExtensionContext) {
+  const display = await import("./owner-display.mjs");
+  const ownerDisplay = new display.OwnerDisplay();
+  const ownerDisplayControler = new display.OwnerDisplayController(
+    ownerDisplay,
+  );
+
+  const { quickPickTeamList, quickPickTeamFields } = await import(
+    "./quick-picks.mjs"
+  );
 
   context.subscriptions.push(ownerDisplay);
   context.subscriptions.push(ownerDisplayControler);
