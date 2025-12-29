@@ -11,7 +11,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           always-auth: true
-          node-version: 20
+          node-version: 24
           registry-url: "https://npm.pkg.github.com"
           scope: "@noahm"
           cache: "yarn"
@@ -26,4 +26,4 @@ jobs:
         run: yarn lint
 
       - name: Webpack Build
-        run: yarn compile
+        run: yarn build
