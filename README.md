@@ -6,6 +6,8 @@ Allows easy access to contact info for code owners encoded within the CODEOWNERS
 
 ## Features
 
+Provides syntax highlighting for CODEOWNERS files.
+
 Displays the owner of the current file in the status bar.
 
 ![A preview of the extension](images/statusbar-low.gif)
@@ -16,20 +18,23 @@ If you provide contact info in your CODEOWNERS file, this allows you easy access
 
 ## Installation
 
-The simplest way to install is from the official extension marketplace: https://marketplace.visualstudio.com/items?itemName=noahm.codeowners-extended
+The extension is available from:
 
-Alternatively, download the latest release from the releases section here. Run `code --install-extension codeowners-extended-X.X.X.vsix` or, from the "..." menu at the top of the extensions sidebar inside VS Code, pick "Install from VISX..."
+- The official extension marketplace: https://marketplace.visualstudio.com/items?itemName=noahm.codeowners-extended
+- Open VSX Registry: https://open-vsx.org/extension/noahm/codeowners-extended
+
+Alternatively, download the latest release from the Github releases section. Run `code --install-extension codeowners-extended-X.X.X.vsix` or, from the "..." menu at the top of the extensions sidebar inside VS Code, pick "Install from VISX..."
 
 ## Requirements
 
-Add a CODEOWNERS file to your project according to [Github documentation](https://help.github.com/articles/about-codeowners/)
+Add a CODEOWNERS file to your project according to [Github documentation](https://help.github.com/articles/about-codeowners/) (or via conventions of Gitlab or Bitbucket)
 
 Team contact info will only be available for projects that include a structured contact info section
 within its CODEOWNERS file according to the specs described [here](https://github.com/noahm/codeowners?tab=readme-ov-file#team-metadata).
 
 ## Extension Settings
 
-No settings have been implemented yet. May one day add the ability to pick specific info field names for display in the team list.
+No settings have been implemented yet. Ability to specify a non-standard CODEOWNERS file name/location is coming soon!
 
 ## Known Issues
 
