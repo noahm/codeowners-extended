@@ -1,7 +1,7 @@
 {
   "name": "codeowners-extended",
   "displayName": "Codeowners Extended",
-  "description": "Brings the power of the codeowners file to your fingertips",
+  "description": "Get more out of your CODEOWNERS file",
   "version": "2.0.0",
   "license": "Apache-2.0",
   "author": {
